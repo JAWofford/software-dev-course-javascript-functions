@@ -26,13 +26,14 @@ This activity reinforces:
 5️⃣ Test the refactored script to ensure it produces the same output as the original.
 
 ---
-*/
+
 
 // ============================================
 // ❌ Original Code (Before Refactoring)
 // ============================================
 
 // Script 1 - Greeting multiple users
+
 console.log("Welcome, Alice!");
 console.log("Welcome, Bob!");
 console.log("Welcome, Charlie!");
@@ -42,16 +43,21 @@ let num1 = 5, num2 = 10;
 let sum = num1 + num2;
 console.log("The sum of 5 and 10 is " + sum);
 
+
 // Script 3 - Product calculation
+
 let product = num1 * num2;
 console.log("The product of 5 and 10 is " + product);
 
+
 // Script 4 - Print names from a list
+
 let names = ["Alice", "Bob", "Charlie"];
 console.log("Names in the list:");
 for (let i = 0; i < names.length; i++) {
     console.log(names[i]);
 }
+*/
 
 /*
 ===========================================
@@ -72,3 +78,40 @@ for (let i = 0; i < names.length; i++) {
 */
 
 // ✅ Your refactored code goes below this line!
+
+//Refactored Sript 1 - Greeting multiple users
+function greeting(name){
+   return`Welcome, ${name}!`;
+}
+
+console.log(greeting("Alice"));
+console.log(greeting("Bob"));
+console.log(greeting("Charlie"));
+
+//Refactored Script 2 - Sum Calculation
+function calculateSum(num1,num2){
+   let sum = num1 + num2;
+   return `The sum of ${num1} and ${num2} is ${sum}`;
+}
+
+console.log(calculateSum(5, 10));
+
+//Refactored Script 3 - Product Calculation
+
+function calculateProduct(num1, num2){
+   let product = num1 * num2;
+   return `The product of ${num1} and ${num2} is ${product}`
+}
+
+console.log(calculateProduct(5, 10));
+
+//Refactored Script 4 - Print names from a list
+
+function listNames(namesList){
+   console.log('Names in the list:'); //putting log inside the function so I don't display undefined.
+   for (let i = 0; i < namesList.length; i++) {
+    console.log(namesList[i]);
+   }
+}
+let names = ["Alice", "Bob", "Charlie"];
+listNames(names); //could also just pass the names themselves.
